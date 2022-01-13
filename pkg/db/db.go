@@ -1,3 +1,3 @@
 package db
 
-const Value = 100
+var Value = 100
