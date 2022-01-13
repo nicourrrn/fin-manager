@@ -2,13 +2,10 @@ package models
 
 import "time"
 
-var Categories []string
-
 type Transaction struct {
-	Id          int
-	UserId      int
-	Category    *string
+	Id          int64
 	Total       int
+	Category    *string
 	Description string
 	CreatedAd   time.Time
 }

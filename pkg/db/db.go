@@ -4,10 +4,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"os"
-	"time"
 )
-
-const CacheLifeTime = time.Minute
 
 type Connection sqlx.DB
 

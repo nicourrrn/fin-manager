@@ -21,7 +21,7 @@ func NewUserRepo(cacheLifeTime time.Duration) *UserRepo {
 	return &UserRepo{cache: cache, cacheLifeTime: cacheLifeTime}
 }
 
-func (u UserRepo)LoadUser(c db.Connection, id int64) (*models.User, error){
+func (u UserRepo)LoadUser(c *db.Connection, id int64) (*models.User, error){
 	if cachedUser, ok := u.cache[id]; ok {
 		return cachedUser.User, nil
 	}
