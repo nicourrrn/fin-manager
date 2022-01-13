@@ -30,16 +30,6 @@ CREATE TABLE `categories` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `categories`
---
-
-LOCK TABLES `categories` WRITE;
-/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Продукты'),(2,'Кафе и рестораны'),(3,'Спорт'),(4,'Развлечения'),(5,'Мобильный'),(6,'Медицина'),(7,'Косметика'),(8,'Коммунальные услуги'),(9,'Одежда и обувь'),(10,'Кино'),(11,'Животные'),(12,'Книги'),(13,'Отложения'),(14,'Налоги'),(15,'Техника'),(16,'Транспорт');
-/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `transactions`
 --
 
@@ -59,15 +49,6 @@ CREATE TABLE `transactions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `transactions`
---
-
-LOCK TABLES `transactions` WRITE;
-/*!40000 ALTER TABLE `transactions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `transactions` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -77,7 +58,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `moneys` int(11) NOT NULL DEFAULT 0,
+  `money` int(11) NOT NULL DEFAULT 0,
   `for_days` int(11) NOT NULL,
   `money_per_day` int(11) DEFAULT NULL,
   `now_money` int(11) NOT NULL,
@@ -86,15 +67,6 @@ CREATE TABLE `users` (
   UNIQUE KEY `user_login_uindex` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -105,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-13 20:36:31
+-- Dump completed on 2022-01-13 20:49:04

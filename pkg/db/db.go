@@ -1,3 +1,7 @@
 package db
 
-var Value = 100
+import (
+	"github.com/jmoiron/sqlx"
+)
+
+type Connection *sqlx.DB
