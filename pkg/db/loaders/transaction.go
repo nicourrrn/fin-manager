@@ -2,7 +2,7 @@ package loaders
 
 import (
 	"github.com/nicourrrn/fin-manager/pkg/db"
-	"github.com/nicourrrn/fin-manager/pkg/db/models"
+	"github.com/nicourrrn/fin-manager/pkg/models"
 	"time"
 )
 
