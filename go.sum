@@ -1,4 +1,3 @@
-github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
 github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
@@ -8,7 +7,7 @@ github.com/lib/pq v1.2.0 h1:LXpIM/LZ5xGFhOpXAQUIMM1HdyqzVYM13zNdjCEEcA0=
 github.com/lib/pq v1.2.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
 github.com/mattn/go-sqlite3 v1.14.6 h1:dNPt6NO46WmLVt2DLNpwczCmdV5boIZ6g/tlDrlRUbg=
 github.com/mattn/go-sqlite3 v1.14.6/go.mod h1:NyWgC/yNuGj7Q9rpYnZvas74GogHl5/Z4A/KQRfk6bU=
-github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220113173741-c5743c1b8281 h1:Idl8Gw5JuyQlpOCuRdQ4z7d7rxpR+0Rvc3tx9U2NYRI=
-github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220113173741-c5743c1b8281/go.mod h1:2Ad+U2FtLj4BRYqFPcr4/4Eb5xfb89fDDgLqYg4Znk4=
 github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220115171755-4a6b75e0cbaa h1:wRg8IYzBt2WP0mGzVe5KrNgwFtnzSJ2a9Ui1JO7VdlU=
 github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220115171755-4a6b75e0cbaa/go.mod h1:UIcJucGhBrYw9tCE7Znk69xLs9f9lf12T52AWo/eYNY=
+github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220115211915-9cd84d260611 h1:JquwkjMxOA1W7xsXw21SXCJOPw1B9tdUorxRE854VgM=
+github.com/nicourrrn/fin-manager/pkg/db v0.0.0-20220115211915-9cd84d260611/go.mod h1:UIcJucGhBrYw9tCE7Znk69xLs9f9lf12T52AWo/eYNY=
