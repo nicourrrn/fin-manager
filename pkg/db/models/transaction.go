@@ -1,4 +1,4 @@
-package loaders
+package models
 
 import (
 	"github.com/nicourrrn/fin-manager/pkg/db"

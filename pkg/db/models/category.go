@@ -1,4 +1,4 @@
-package loaders
+package models
 
 import "github.com/nicourrrn/fin-manager/pkg/db"
 
@@ -13,7 +13,7 @@ func LoadCategories(c *db.Connection) (*CategoryRepo, error) {
 	}
 	defer rows.Close()
 	var (
-		id int64
+		id   int64
 		name string
 	)
 	cr := CategoryRepo{
@@ -28,7 +28,7 @@ func LoadCategories(c *db.Connection) (*CategoryRepo, error) {
 	}
 	return &cr, nil
 }
-func (c CategoryRepo)GetCategorie(id int64) *string{
+func (c CategoryRepo) GetCategorie(id int64) *string {
 	name, _ := c.cache[id]
 	return &name
 }

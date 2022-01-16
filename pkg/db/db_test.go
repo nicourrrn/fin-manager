@@ -3,7 +3,7 @@ package db_test
 import (
 	"fmt"
 	"github.com/nicourrrn/fin-manager/pkg/db"
-	"github.com/nicourrrn/fin-manager/pkg/db/loaders"
+	"github.com/nicourrrn/fin-manager/pkg/db/models"
 	"log"
 	"strconv"
 	"testing"
@@ -16,14 +16,14 @@ func TestNewConnection(t *testing.T) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	uRepo := loaders.NewUserRepo(time.Minute)
+	uRepo := models.NewUserRepo(time.Minute)
 	user, err := uRepo.LoadUser(conn, 1)
 	if err != nil {
 		log.Fatalln(err)
 	}
 	fmt.Println("User login: " + user.Login)
-	tRepo := loaders.NewTransactionRepo(time.Second * 30)
-	categories, err := loaders.LoadCategories(conn)
+	tRepo := models.NewTransactionRepo(time.Second * 30)
+	categories, err := models.LoadCategories(conn)
 	transaction, err := tRepo.LoadTransaction(conn, categories, 1)
 	if err != nil {
 		log.Fatalln(err)
