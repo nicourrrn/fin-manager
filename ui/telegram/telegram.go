@@ -14,7 +14,7 @@ type TgBot struct {
 	Statuses map[int64]BotHandler
 }
 
-func NewBot(token string) (*tgbotapi.BotAPI, error) {
+func NewBot(token string) (*TgBot, error) {
 	bot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		return nil, err
@@ -24,16 +24,28 @@ func NewBot(token string) (*tgbotapi.BotAPI, error) {
 		return nil, err
 	}
 	log.Printf("%s loggined", me.FirstName)
-	return bot, nil
+	return &TgBot{
+		Bot:      bot,
+		Commands: make(map[string]BotHandler),
+		Statuses: make(map[int64]BotHandler),
+	}, nil
 }
 
 func (b *TgBot) AddCommand(command string, handler BotHandler) {
 	b.Commands[command] = handler
 }
 
-func (b *TgBot) Handle(msgs chan *tgbotapi.Message, errChan chan error) {
-	var msg *tgbotapi.Message
-	for msg = range msgs {
+func (b *TgBot) Handle(upds tgbotapi.UpdatesChannel, errChan chan error) {
+	var (
+		//upd *tgbotapi.Update
+		msg *tgbotapi.Message
+	)
+
+	for upd := range upds {
+		if upd.Message == nil {
+			continue
+		}
+		msg = upd.Message
 		if h, ok := b.Commands[msg.Text]; ok {
 			err := h(b.Bot, msg)
 			if err != nil {
